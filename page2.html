@@ -42,14 +42,33 @@
     <hr>
     <h1>FORMS</h1>
       <hr>
+      
+      <form action="">
       <h1>PAYMENT FORM</h1>
       <h2>CONTACT INFORMATION</h2>
-       <p>Name: <input type="text" name="NAME"></p>
-       <p>Male <input type="radio" name="GENDER" id="Male">
-          Female <input type="radio" name="GENDER" id="Female">
-      </p>
+       <p>Name: <input type="text" name="NAME" required></p>
+       <fieldset>
+        <legend>GENDER</legend>
+       <p>Male <input type="radio" name="GENDER" id="Male" required>
+          Female <input type="radio" name="GENDER" id="Female" required>
+       </p> 
+        </fieldset>
+        <p>Address: <textarea name="Address" id="Address" cols="100" rows="8" required></textarea></p>
+         <p>Email: <input type="email" name="mail" id="email" required></p>
+         <p>Pincode: <input type="number" name="pincode" id="pc" required></p>
+         <h2>PAYMENT INFORMATION</h2>
+         <p>Card Type :
+          <select name="Card_type" id="Card_type" required>
+            <option value="">--Select a Card Type--</option>
+            <option value="Visa">Visa</option>
+            <option value="Mastercard">Mastercard</option>
+            <option value="Rupay">Rupay</option></select>
+         </p>
+         <p>Card Number <input type="number" name="Card_number" id="CN" required></p>
+         <p>Expiration Date <input type="date" name="Expdate" id="Expdate" required></p>
+         <p> CVV <input type="password" name="cvv" id="cvv" required></p>
 
-
-    <form action=""></form>
+         <input type="submit" value="Pay now"> 
+    </form>
   </body>
 </html>
